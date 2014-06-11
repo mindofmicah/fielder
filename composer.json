@@ -1,0 +1,23 @@
+{
+    "name": "mindofmicah/fielder",
+    "description": "Quickly build html fields",
+    "require-dev": {
+        "phpspec/phpspec": "2.*"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "" : "src/",
+            "MindOfMicah\\Fielder\\":"src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "micah eschbacher",
+            "email": "micah@whamdonk.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+
+    }
+}

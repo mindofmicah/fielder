@@ -1,0 +1,6 @@
+formatter.name: pretty
+
+suites:
+    suite:
+        src_path: src
+        namespace: MindOfMicah\Fielder        
