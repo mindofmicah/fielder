@@ -21,4 +21,11 @@ class Fielder
         $ret.='</select></div>';
         return $ret;
     }
+
+    public function textarea($id, $label)
+    {
+
+        return '<div class="form-group"><label class="control-label" for="' . $id . '">' . $label . '</label><textarea class="form-control" name="'.$id.'" id="'.$id.'"></textarea></div>';
+
+    }
 }
