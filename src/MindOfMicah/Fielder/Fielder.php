@@ -6,20 +6,19 @@ use MindOfMicah\Fielder\Generators\GeneratorInterface;
 
 class Fielder
 {
-    protected $generator;
-
-    public function __construct(GeneratorInterface $generator)
+    public function text($id, $label)
     {
-        $this->generator = $generator;
+        return '<div class="form-group"><label class="control-label" for="' . $id . '">' . $label . '</label><input class="form-control" type="text" name="'.$id.'" id="'.$id.'" /></div>';
     }
 
-    public function text($argument1, $argument2)
+    public function select($id, $label, array $options)
     {
-        return $this->generator->textField($argument1, $argument2);
-    }
-
-    public function select($argument1, $argument2, array $argument3)
-    {
-        return $this->generator->selectField($argument1, $argument2, $argument3);
+        $ret = '';
+        $ret.= '<div class="form-group"><label class="control-label" for="'.$id.'">'.$label.'</label><select name="'.$id.'" id="'.$id.'" class="form-control">';
+        foreach($options as $k => $option ) {
+            $ret.='<option value="'.$k.'">'.$option.'</option>';
+        }
+        $ret.='</select></div>';
+        return $ret;
     }
 }
